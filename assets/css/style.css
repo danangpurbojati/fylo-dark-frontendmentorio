@@ -1,0 +1,430 @@
+:root{
+    font-size: 14px;
+    --intro: hsl(217, 28%, 15%);
+    --main: hsl(218, 28%, 13%);
+    --footer: hsl(216, 53%, 9%);
+    --testimony: hsl(219, 30%, 18%);
+    --cyan: hsl(176, 68%, 64%);
+    --blue: hsl(198, 60%, 50%);
+    --red: hsl(0, 100%, 63%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: var(--main);
+    color: var(--white);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+.btn{
+    /* background-color: red; */
+    background-image: linear-gradient(to right, var(--cyan), var(--blue));
+    padding: 10px 40px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: .2s;
+    color: var(--white);
+}
+
+.btn:hover{
+    filter: brightness(150%);
+}
+
+/* Navigation */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: var(--intro);
+}
+
+.logo{
+    width: 120px;
+}
+
+.menu{
+    display: flex;
+}
+
+.menu li{
+    margin-left: 2rem;
+}
+
+.menu li a{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    transition: .2s;
+}
+
+.menu li a:hover{
+    font-weight: bold;
+    border-bottom: 1px solid var(--white);
+}
+/* End Navigation */
+
+
+
+
+/* Intro */
+#intro{
+    background-color: var(--intro);
+    text-align: center;
+    background-image: url('../images/bg-curvy-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    margin-bottom: 100px;
+}
+#intro img{
+    margin-bottom: 3rem;
+}
+
+.intro-text{
+    width: 400px;
+    margin: 20px auto;
+    line-height: 2rem;
+}
+
+.intro-text h1{
+    font-size: 23px;
+}
+.intro-text h2{
+    margin-bottom: 2rem;
+}
+/* End Intro */
+
+
+
+
+/* Features */
+#features{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+    margin-bottom: 100px;
+}
+
+.feature-content{
+    width: 50%;
+    justify-self: center;
+    text-align: center;
+    line-height: 25px;
+    /* border: 1px solid white; */
+}
+/* End Features */
+
+
+
+
+/* Productive */
+#productive{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 60px;
+    grid-gap: 60px;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.productive-text h1{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.productive-text h2{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.productive-text p{
+    line-height: 25px;
+    margin: 18px 0;
+}
+
+.link{
+    display: inline-block;
+    border-bottom: 1px solid var(--cyan);
+    padding-bottom: 10px;
+    margin-top: 20px;
+    transition: .2s;
+}
+
+.link:hover{
+    border-bottom: 1px solid var(--white);
+}
+.link:hover .flex-link{
+    color: var(--white);
+}
+
+
+.flex-link{
+    display: flex;
+    align-items: center;
+    color: var(--cyan);
+}
+
+.flex-link img{
+    margin-left: 10px;
+}
+/* EndProductive */
+
+
+
+
+/* Testimonial */
+#testimony{
+    padding: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    position: relative;
+}
+
+#testimony::before{
+    content: url('../images/bg-quotes.png');
+    position: absolute;
+    top: 30px;
+    left: 45px;
+    z-index: -1;
+}
+
+.comment{
+    padding: 20px;
+    background-color: var(--testimony);
+}
+
+.comment-text{
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.user{
+    display: flex;
+}
+
+.user img{
+    width: 40px;
+    border-radius: 90%;
+    margin-right: 15px;
+}
+
+.user-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* End Testimonial */
+
+
+
+
+/* Access */
+#access{
+    width: 50%;
+    padding: 30px 50px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 25px;
+    background-color: var(--intro);
+
+    position: relative;
+    top: 100px;
+}
+
+#access h1{
+    margin-bottom: 20px;
+}
+
+.submit-form{
+    margin-top: 20px;
+}
+
+.submit-form input{
+    padding: 10px 20px;
+    width: 300px;
+    border: none;
+    border-radius: 25px;
+}
+/* End Access */
+
+
+
+
+/* footer */
+footer{
+    padding: 120px 60px 30px 60px;
+    width: 100%;
+    background-color: var(--footer);
+}
+
+.footer-grid{
+    display: grid;
+    grid-template-columns: 4fr 2fr 3fr 1fr;
+    grid-gap: 25px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.footer-location{
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer-location img{
+    margin-right: 15px;
+}
+
+.footer-location p{
+    line-height: 20px;
+}
+
+.call{
+    justify-self: center;
+}
+
+.call-content{
+    margin-bottom: 10px;
+}
+
+.call-content img{
+    margin-right: 15px;
+}
+
+.footer-menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-self: center;
+    grid-gap: 10px 30px;
+}
+
+
+.social{
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-border{
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--white);
+}
+
+
+
+
+/* credit */
+.credit{
+    margin: 15px;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+
+/* Media Query */
+@media only screen and (max-width: 900px) {
+    #features{
+        grid-gap: 20px;
+    }
+    .feature-content{
+        width: 100%;
+    }
+
+    #productive{
+        grid-gap: 30px;
+    }
+
+    #productive img:nth-child(1){
+        width: 400px;
+    }
+
+    #testimony{
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+    }
+
+    #access{
+        width: 80%;
+    }
+
+    .footer-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .call{
+        justify-self: flex-start;
+    }
+
+    .footer-menu{
+        grid-template-columns: 1fr;
+        justify-self: flex-start;
+    }
+    .social{
+        justify-content: center;
+    }
+
+    .social-border{
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    #intro img{
+        width: 80%;
+    }
+
+    #features{
+        grid-template-columns: 1fr;
+    }
+
+    #productive{
+        grid-template-columns: 1fr;
+    }
+
+    #testimony{
+        padding: 30px;
+    }
+
+    #access{
+        width: 90%;
+    }
+
+    .submit-form input{
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .submit-form button{
+        width: 90%;
+    }
+}
